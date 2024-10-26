@@ -4,7 +4,7 @@ import healthRoute from "./controllers/health";
 import demoRoute from "./controllers/demo";
 import usersRoute from "./controllers/users";
 
-export default async function router(fastify: FastifyInstance) {
+export default async function router(fastify: FastifyInstance): Promise<void> {
     fastify.register(indexRoute, {prefix: "/"});
     fastify.register(healthRoute, {prefix: "/health"});
     fastify.register(demoRoute, {prefix: "/demo"});

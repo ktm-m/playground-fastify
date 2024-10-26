@@ -7,7 +7,8 @@ dotenv.config();
 const port: number = parseInt(process.env.PORT || "3000", 10);
 const address: string = process.env.HOST || "localhost";
 
-const start = async () => {
+const start = async (): Promise<void> => {
+    // Promise<void> is a promise that returns void
     try {
         await app.listen({port: port, host: address});
         // app.listen can receive a callback function as the second argument

@@ -1,7 +1,7 @@
 import {FastifyInstance, FastifyRequest, FastifyReply} from "fastify";
 
-export default async function demo(fastify: FastifyInstance) {
-    fastify.get("/:firstname/:lastname", async (request: FastifyRequest, reply: FastifyReply) => {
+export default async function demo(fastify: FastifyInstance): Promise<void> {
+    fastify.get("/:firstname/:lastname", async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
         const params: any = request.params;
 
         const firstname: string = params.firstname;
@@ -10,7 +10,7 @@ export default async function demo(fastify: FastifyInstance) {
         reply.send(({message: `Firstname: ${firstname}, Lastname: ${lastname}`}));
     });
 
-    fastify.get("/", async (request: FastifyRequest, reply: FastifyReply) => {
+    fastify.get("/", async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
         const query: any = request.query;
 
         const firstname: string = query.firstname;
@@ -19,11 +19,11 @@ export default async function demo(fastify: FastifyInstance) {
         reply.send(({message: `Firstname: ${firstname}, Lastname: ${lastname}`}));
     });
 
-    fastify.post("/", async (_request: FastifyRequest, reply: FastifyReply) => {
+    fastify.post("/", async (_request: FastifyRequest, reply: FastifyReply): Promise<void> => {
         reply.send(({message: "Response from POST request"}));
     });
 
-    fastify.post("/params", async (request: FastifyRequest, reply: FastifyReply) => {
+    fastify.post("/params", async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
         const body: any = request.body;
 
         const username: string = body.username;
