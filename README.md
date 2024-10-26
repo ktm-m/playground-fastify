@@ -2,6 +2,12 @@
 ## Description
 This is a playground to learn how to use Fastify framework basics.
 
+## Technologies Stack
+- TypeScript
+- Fastify
+- MySQL
+- Docker
+
 ## Prerequisites
 - Node.js
 - npm
