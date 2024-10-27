@@ -1,7 +1,16 @@
 ### TypeScript Command
 
-- tsc --init: Initial tsconfig.json
-- tsc -p tsconfig.json: Compile TypeScript
+#### Initial tsconfig.json
+
+```bash
+tsc --init
+```
+
+#### Compile TypeScript
+
+```bash
+tsc -p tsconfig.json
+```
 
 ### NPM Options
 
