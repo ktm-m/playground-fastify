@@ -51,4 +51,12 @@ Run the following commands:
 make app-up
 ```
 
+## How to stop
+
+Run the following commands:
+
+```bash
+make app-down
+```
+
 
